@@ -1,98 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="title: 軟體工程簡介 Software Engineering軟體工程軟體工程流程通常包含以下階段： 1234567flowchart LR需求分析 --&gt; 設計設計 --&gt; 實現實現 --&gt; 測試測試 --&gt; 部署部署 --&gt; 維護維護 --&gt; 需求分析  需求分析在這個階段，工程師會與客戶或使用者討論他們的需求，並將這些需求記錄下來。包括功能需求（軟">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="我們可以說軟體工程流程通常包含以下階段： flowchart LR 需求分析 --&gt; 設計 設計 --&gt; 實現 實現 --&gt; 測試 測試 --&gt; 部署 部署 --&gt; 維護 維護 --&gt; 需求分析  需求分析在這個階段，工程師會與客戶或使用者討論他們的需求，並將這些需求記錄下來。包括功能需求（軟體需要做什麼）和非功能需求（例如性能、安全性或可用性）。  收集需求：這可能涉及到與客戶或使用者進行訪談、">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="軟體工程簡介">
 <meta property="og:url" content="http://example.com/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="title: 軟體工程簡介 Software Engineering軟體工程軟體工程流程通常包含以下階段： 1234567flowchart LR需求分析 --&gt; 設計設計 --&gt; 實現實現 --&gt; 測試測試 --&gt; 部署部署 --&gt; 維護維護 --&gt; 需求分析  需求分析在這個階段，工程師會與客戶或使用者討論他們的需求，並將這些需求記錄下來。包括功能需求（軟">
+<meta property="og:site_name" content="Wellcome to ST.W&#39;s Blog">
+<meta property="og:description" content="我們可以說軟體工程流程通常包含以下階段： flowchart LR 需求分析 --&gt; 設計 設計 --&gt; 實現 實現 --&gt; 測試 測試 --&gt; 部署 部署 --&gt; 維護 維護 --&gt; 需求分析  需求分析在這個階段，工程師會與客戶或使用者討論他們的需求，並將這些需求記錄下來。包括功能需求（軟體需要做什麼）和非功能需求（例如性能、安全性或可用性）。  收集需求：這可能涉及到與客戶或使用者進行訪談、">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://www.codica.com/static/e2fc451b717b621683dd61f4bf5c185b/d114d/The_most_commonly_used_programming_languages_in_2022_min_6b1fc15506.jpg">
+<meta property="og:image" content="http://example.com/img/The_most_commonly_used_programming_languages_in_2022_min_6b1fc15506.jpg">
 <meta property="og:image" content="https://assets-global.website-files.com/60c912417dc3bac5c9fa2616/61a7f553619eefbc08d7987a_Group%20199%20(1)%20(1)%20(1).png">
 <meta property="og:image" content="https://resources.scrumalliance.org/uploads/2021/1/11/scrum-framework-sm4-qskx2NDlCke0cG3a3qIPA.jpg">
 <meta property="og:image" content="https://www.xalt.de/wp-content/uploads/2022/08/devsecops_loop.png">
 <meta property="og:image" content="https://i0.wp.com/www.phdata.io/wp-content/uploads/2021/07/code-validate-deploy-loop-1024x426.png">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Waterfall_model.svg/440px-Waterfall_model.svg.png">
 <meta property="article:published_time" content="2024-04-02T05:13:36.200Z">
-<meta property="article:modified_time" content="2024-04-02T05:27:31.094Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2024-04-02T06:50:08.997Z">
+<meta property="article:author" content="ST.W">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.codica.com/static/e2fc451b717b621683dd61f4bf5c185b/d114d/The_most_commonly_used_programming_languages_in_2022_min_6b1fc15506.jpg">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="http://example.com/img/The_most_commonly_used_programming_languages_in_2022_min_6b1fc15506.jpg">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<link rel="canonical" href="http://example.com/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B/">
 
-  
-  
-<meta name="generator" content="Hexo 7.1.1"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>軟體工程簡介 | Wellcome to ST.W's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</header>
 
-      <div class="outer">
-        <section id="main"><article id="post-2024-04-02 軟體工程簡介" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B/" class="article-date">
-  <time class="dt-published" datetime="2024-04-02T05:13:36.200Z" itemprop="datePublished">2024-04-02</time>
-</a>
-    
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Wellcome to ST.W's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
-  <div class="article-inner">
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ST.W">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wellcome to ST.W's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          軟體工程簡介
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-04-02 13:13:36 / Modified: 14:50:08" itemprop="dateCreated datePublished" datetime="2024-04-02T13:13:36+08:00">2024-04-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
     
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <hr>
-<h2 id="title-軟體工程簡介-Software-Engineering"><a href="#title-軟體工程簡介-Software-Engineering" class="headerlink" title="title: 軟體工程簡介 Software Engineering"></a>title: 軟體工程簡介 Software Engineering</h2><h1 id="軟體工程"><a href="#軟體工程" class="headerlink" title="軟體工程"></a>軟體工程</h1><p>軟體工程流程通常包含以下階段：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">需求分析 --&gt; 設計</span><br><span class="line">設計 --&gt; 實現</span><br><span class="line">實現 --&gt; 測試</span><br><span class="line">測試 --&gt; 部署</span><br><span class="line">部署 --&gt; 維護</span><br><span class="line">維護 --&gt; 需求分析</span><br></pre></td></tr></table></figure>
+        <p>我們可以說軟體工程流程通常包含以下階段：</p>
+<pre class="mermaid">flowchart LR
+需求分析 --> 設計
+設計 --> 實現
+實現 --> 測試
+測試 --> 部署
+部署 --> 維護
+維護 --> 需求分析</pre>
 
 <h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>在這個階段，工程師會與客戶或使用者討論他們的需求，並將這些需求記錄下來。包括功能需求（軟體需要做什麼）和非功能需求（例如性能、安全性或可用性）。</p>
 <ol>
@@ -117,7 +227,8 @@
 </ul>
 <h3 id="設計"><a href="#設計" class="headerlink" title="設計"></a>設計</h3><p>在這個階段，工程師會設計軟體的架構和接口。這可能包括選擇適當的設計模式、定義數據結構和算法，以及設計用戶界面。<br>此階段非指說具體的程式碼產出，則是模擬出軟體的架構與流程，以及軟體的使用者介面。可透過UI&#x2F;UX所設計的介面，讓客戶了解軟體的使用方式，並且透過流程圖，讓客戶了解軟體的流程，或者是透過UML圖，讓工程師了解軟體的架構。可參考<a target="_blank" rel="noopener" href="https://www.visual-paradigm.com/tw/guide/uml-unified-modeling-language/what-is-uml/">線上文件</a></p>
 <p>然而，為了快速推出軟體產品，現況已較少使用UML圖，而是直接使用UI&#x2F;UX設計軟體的使用者介面，並且透過流程圖來設計軟體的流程。<br>加上簡單的方塊圖、流程圖來設計軟體的架構，並且透過簡單的文字說明來設計軟體的流程，這樣的方式，可以讓工程師快速了解軟體的架構與流程，並且快速開發出軟體產品。</p>
-<h3 id="實現"><a href="#實現" class="headerlink" title="實現"></a>實現</h3><p>在這個階段，工程師會寫程式碼來實現設計。這可能包括寫應用程式碼、測試程式碼和文檔。<br>其包含領域知識有：程式碼版本控管、軟體開發、單元測試、程式風格、重構、設計模式等。<br><img src="https://www.codica.com/static/e2fc451b717b621683dd61f4bf5c185b/d114d/The_most_commonly_used_programming_languages_in_2022_min_6b1fc15506.jpg"></p>
+<h3 id="實現"><a href="#實現" class="headerlink" title="實現"></a>實現</h3><p>在這個階段，工程師會寫程式碼來實現設計。這可能包括寫應用程式碼、測試程式碼和文檔。<br>其包含領域知識有：程式碼版本控管、軟體開發、單元測試、程式風格、重構、設計模式等。</p>
+<p><img src="/../img/The_most_commonly_used_programming_languages_in_2022_min_6b1fc15506.jpg"></p>
 <h3 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h3><p>在這個階段，工程師會運行測試來確保軟體的功能和性能符合需求。這可能包括單元測試、整合測試和系統測試。<br>包含的領域知識有：整合測試、系統測試、性能測試、安全測試、測試驅動開發、持續整合(CI&#x2F;CD)等。</p>
 <p><a target="_blank" rel="noopener" href="https://pcloudy.medium.com/top-automation-programming-languages-of-2023-dab2bbb72d4b">https://pcloudy.medium.com/top-automation-programming-languages-of-2023-dab2bbb72d4b</a><br>如</p>
 <ul>
@@ -138,99 +249,189 @@
 <h3 id="瀑布式開發"><a href="#瀑布式開發" class="headerlink" title="瀑布式開發"></a>瀑布式開發</h3><p>瀑布式開發。它是一種軟體開發方法論，它將軟體開發分為一系列階段，每個階段都有自己的目標和交付項目。瀑布式開發旨在通過在開發過程中確定需求來實現這一目標。可參考<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E7%80%91%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91">線上文件</a></p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Waterfall_model.svg/440px-Waterfall_model.svg.png"></p>
 
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B/" data-id="cluhxve9m0000sb6u7woi4red" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A8%AD%E8%A8%88"><span class="nav-number">2.</span> <span class="nav-text">設計</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E7%8F%BE"><span class="nav-number">3.</span> <span class="nav-text">實現</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%AC%E8%A9%A6"><span class="nav-number">4.</span> <span class="nav-text">測試</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2"><span class="nav-number">5.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B6%AD%E8%AD%B7"><span class="nav-number">6.</span> <span class="nav-text">維護</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BB%9F%E9%AB%94%E6%96%B9%E6%B3%95%E8%AB%96"><span class="nav-number"></span> <span class="nav-text">軟體方法論</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DevOps"><span class="nav-number">1.</span> <span class="nav-text">DevOps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scrum"><span class="nav-number">2.</span> <span class="nav-text">Scrum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DevSecOps"><span class="nav-number">3.</span> <span class="nav-text">DevSecOps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DevMLOps"><span class="nav-number">4.</span> <span class="nav-text">DevMLOps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%80%91%E5%B8%83%E5%BC%8F%E9%96%8B%E7%99%BC"><span class="nav-number">5.</span> <span class="nav-text">瀑布式開發</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ST.W</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ST.W</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
     </footer>
   </div>
-  
-    
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
 
   
-    
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li></ul>
-    </div>
-  </div>
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+<script src="/js/next-boot.js"></script>
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
 
 
 
 
 
-  </div>
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
 </body>
 </html>
