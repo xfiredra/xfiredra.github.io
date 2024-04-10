@@ -20,25 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="軟體方法論何謂軟體開發方法論？這是一種軟體開發的方法論，它定義了一套軟體開發的流程，以確保軟體開發的品質。軟體開發方法論通常包含以下幾類： DevOpsDevOps 是一種軟體開發方法論，它將軟體開發和運營結合在一起，以實現更快的軟體交付和更高的軟體質量。DevOps 旨在通過自動化軟體交付流程來實現這一目標。可參考線上文件 ScrumScrum 是一種軟體開發方法論，它強調在開發過程中快速迭代和">
+  <meta name="description" content="最近時有夥伴一直問到、探討樣本數的多寡。多數都是前輩留下、至少100個才有得計算百分比、一個PCB連版數等因素而定產品驗證時的樣本數。我們先冷靜下來看，驗證的目的應該是什麼？是要有一份報告可以給客戶、老闆交代？還是要從驗證報告中找出問題之所在。我想很多公司、組織多數上都是選擇前者，一但驗證發生不及格，就針對驗證單位究竟是什麼問題？而不是從驗證報告中找出問題之所在。一種給人的感覺是「喜於通過、羞於不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="軟體方法論">
-<meta property="og:url" content="http://example.com/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E6%96%B9%E6%B3%95%E8%AB%96/index.html">
+<meta property="og:title" content="驗證樣本數的究竟要多少是適合的？">
+<meta property="og:url" content="http://example.com/2024/04/08/2024-04-08%20%E9%A9%97%E8%AD%89%E6%A8%A3%E6%9C%AC%E6%95%B8%E7%A9%B6%E7%AB%9F%E8%A6%81%E5%A4%9A%E5%B0%91%E6%98%AF%E9%81%A9%E5%90%88%E7%9A%84/index.html">
 <meta property="og:site_name" content="Wellcome to ST.W&#39;s Blog">
-<meta property="og:description" content="軟體方法論何謂軟體開發方法論？這是一種軟體開發的方法論，它定義了一套軟體開發的流程，以確保軟體開發的品質。軟體開發方法論通常包含以下幾類： DevOpsDevOps 是一種軟體開發方法論，它將軟體開發和運營結合在一起，以實現更快的軟體交付和更高的軟體質量。DevOps 旨在通過自動化軟體交付流程來實現這一目標。可參考線上文件 ScrumScrum 是一種軟體開發方法論，它強調在開發過程中快速迭代和">
+<meta property="og:description" content="最近時有夥伴一直問到、探討樣本數的多寡。多數都是前輩留下、至少100個才有得計算百分比、一個PCB連版數等因素而定產品驗證時的樣本數。我們先冷靜下來看，驗證的目的應該是什麼？是要有一份報告可以給客戶、老闆交代？還是要從驗證報告中找出問題之所在。我想很多公司、組織多數上都是選擇前者，一但驗證發生不及格，就針對驗證單位究竟是什麼問題？而不是從驗證報告中找出問題之所在。一種給人的感覺是「喜於通過、羞於不">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://assets-global.website-files.com/60c912417dc3bac5c9fa2616/61a7f553619eefbc08d7987a_Group%20199%20(1)%20(1)%20(1).png">
-<meta property="og:image" content="https://resources.scrumalliance.org/uploads/2021/1/11/scrum-framework-sm4-qskx2NDlCke0cG3a3qIPA.jpg">
-<meta property="og:image" content="https://www.xalt.de/wp-content/uploads/2022/08/devsecops_loop.png">
-<meta property="og:image" content="https://i0.wp.com/www.phdata.io/wp-content/uploads/2021/07/code-validate-deploy-loop-1024x426.png">
-<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Waterfall_model.svg/440px-Waterfall_model.svg.png">
-<meta property="article:published_time" content="2024-04-02T08:46:38.612Z">
-<meta property="article:modified_time" content="2024-04-02T08:47:56.327Z">
+<meta property="og:image" content="http://example.com/img/Chi-square_distributionPDF.png">
+<meta property="article:published_time" content="2024-04-08T05:24:55.239Z">
+<meta property="article:modified_time" content="2024-04-10T03:37:40.781Z">
 <meta property="article:author" content="ST.W">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://assets-global.website-files.com/60c912417dc3bac5c9fa2616/61a7f553619eefbc08d7987a_Group%20199%20(1)%20(1)%20(1).png">
+<meta name="twitter:image" content="http://example.com/img/Chi-square_distributionPDF.png">
 
-<link rel="canonical" href="http://example.com/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E6%96%B9%E6%B3%95%E8%AB%96/">
+<link rel="canonical" href="http://example.com/2024/04/08/2024-04-08%20%E9%A9%97%E8%AD%89%E6%A8%A3%E6%9C%AC%E6%95%B8%E7%A9%B6%E7%AB%9F%E8%A6%81%E5%A4%9A%E5%B0%91%E6%98%AF%E9%81%A9%E5%90%88%E7%9A%84/">
 
 
 <script id="page-configurations">
@@ -51,7 +47,7 @@
   };
 </script>
 
-  <title>軟體方法論 | Wellcome to ST.W's Blog</title>
+  <title>驗證樣本數的究竟要多少是適合的？ | Wellcome to ST.W's Blog</title>
   
 
 
@@ -156,7 +152,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E6%96%B9%E6%B3%95%E8%AB%96/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/08/2024-04-08%20%E9%A9%97%E8%AD%89%E6%A8%A3%E6%9C%AC%E6%95%B8%E7%A9%B6%E7%AB%9F%E8%A6%81%E5%A4%9A%E5%B0%91%E6%98%AF%E9%81%A9%E5%90%88%E7%9A%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -169,7 +165,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          軟體方法論
+          驗證樣本數的究竟要多少是適合的？
         </h1>
 
         <div class="post-meta">
@@ -178,10 +174,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2024-04-02 16:46:38 / Modified: 16:47:56" itemprop="dateCreated datePublished" datetime="2024-04-02T16:46:38+08:00">2024-04-02</time>
+              <time title="Created: 2024-04-08 13:24:55" itemprop="dateCreated datePublished" datetime="2024-04-08T13:24:55+08:00">2024-04-08</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-04-10 11:37:40" itemprop="dateModified" datetime="2024-04-10T11:37:40+08:00">2024-04-10</time>
+              </span>
 
           
 
@@ -194,13 +196,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="軟體方法論"><a href="#軟體方法論" class="headerlink" title="軟體方法論"></a>軟體方法論</h2><p>何謂軟體開發方法論？這是一種軟體開發的方法論，它定義了一套軟體開發的流程，以確保軟體開發的品質。軟體開發方法論通常包含以下幾類：</p>
-<h3 id="DevOps"><a href="#DevOps" class="headerlink" title="DevOps"></a>DevOps</h3><p>DevOps 是一種軟體開發方法論，它將軟體開發和運營結合在一起，以實現更快的軟體交付和更高的軟體質量。DevOps 旨在通過自動化軟體交付流程來實現這一目標。可參考<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/DevOps">線上文件</a><br><img src="https://assets-global.website-files.com/60c912417dc3bac5c9fa2616/61a7f553619eefbc08d7987a_Group%20199%20(1)%20(1)%20(1).png" alt="Devops"></p>
-<h3 id="Scrum"><a href="#Scrum" class="headerlink" title="Scrum"></a>Scrum</h3><p>Scrum 是一種軟體開發方法論，它強調在開發過程中快速迭代和反饋。Scrum 旨在通過更快地交付軟體來實現這一目標。可參考<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/Scrum">線上文件</a><br><img src="https://resources.scrumalliance.org/uploads/2021/1/11/scrum-framework-sm4-qskx2NDlCke0cG3a3qIPA.jpg"></p>
-<h3 id="DevSecOps"><a href="#DevSecOps" class="headerlink" title="DevSecOps"></a>DevSecOps</h3><p>DevSecOps是一種軟體開發方法論，它將軟體開發、安全和運營結合在一起，以實現更快的軟體交付和更高的軟體質量。DevSecOps 旨在通過自動化軟體交付流程來實現這一目標。可參考<a target="_blank" rel="noopener" href="https://aws.amazon.com/tw/what-is/devsecops/">線上文件</a><br><img src="https://www.xalt.de/wp-content/uploads/2022/08/devsecops_loop.png"></p>
-<h3 id="DevMLOps"><a href="#DevMLOps" class="headerlink" title="DevMLOps"></a>DevMLOps</h3><p>DevMLOps，它將軟體開發、機器學習和運營結合在一起，以實現更快的軟體交付和更高的軟體質量。DevMLOps 旨在通過自動化軟體交付流程來實現這一目標。可參考<a target="_blank" rel="noopener" href="https://www.phdata.io/blog/mlops-vs-devops-whats-the-difference/">線上文件</a><br><img src="https://i0.wp.com/www.phdata.io/wp-content/uploads/2021/07/code-validate-deploy-loop-1024x426.png"></p>
-<h3 id="瀑布式開發"><a href="#瀑布式開發" class="headerlink" title="瀑布式開發"></a>瀑布式開發</h3><p>瀑布式開發。它是一種軟體開發方法論，它將軟體開發分為一系列階段，每個階段都有自己的目標和交付項目。瀑布式開發旨在通過在開發過程中確定需求來實現這一目標。可參考<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E7%80%91%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91">線上文件</a></p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Waterfall_model.svg/440px-Waterfall_model.svg.png"></p>
+        <p>最近時有夥伴一直問到、探討樣本數的多寡。多數都是前輩留下、至少100個才有得計算百分比、一個PCB連版數等因素而定產品驗證時的樣本數。<br>我們先冷靜下來看，驗證的目的應該是什麼？是要有一份報告可以給客戶、老闆交代？還是要從驗證報告中找出問題之所在。<br>我想很多公司、組織多數上都是選擇前者，一但驗證發生不及格，就針對驗證單位究竟是什麼問題？而不是從驗證報告中找出問題之所在。一種給人的感覺是「喜於通過、羞於不良」的心態，久而久之，組織就漸漸的減少驗證的意義～～～甚至，驗少PASS就好，也沒關係。</p>
+<p>言歸正傳～一般驗證可分為以下三個階段：</p>
+<pre class="mermaid">graph LR
+    A[EVT 評估驗證] --> B[DVT 設計驗證] --> C[PVT 量產驗證]</pre>
+<p>擔心篇幅過大，這一篇先談談所謂的可靠度驗證所需要的樣本數量<br>可靠度驗證通常用MTBF來表示，MTBF是Mean Time Between Failure的縮寫，中文為平均無故障時間，是指一個系統或元件在特定時間內的平均無故障運行時間。MTBF是一個重要的可靠度指標，用來衡量一個系統或元件的可靠度。MTBF越高，表示系統或元件的可靠度越高，反之亦然。<br>然而MTBF的計算方式是：<br>$$MTBF &#x3D; \frac{總運行時間}{故障次數}$$<br>這個公式的前提是，我們必須知道總運行時間和故障次數，這樣才能計算出MTBF。但是在實際應用中，我們往往無法知道總運行時間和故障次數，這時我們就需要通過樣本數來估算MTBF。<br>那麼，樣本數究竟要多少才能估算出MTBF呢？這是一個很複雜的問題，因為樣本數的大小會影響到估算的準確性。一般來說，樣本數越大，估算的準確性就越高。但是，樣本數也不能太大，否則會增加成本和時間。因此，我們需要找到一個合適的樣本數，來估算MTBF。<br>FIT(Failure in Time)公式：<br>$$FIT &#x3D; 10^9 * x^2&#x2F;(2 * A * N * Ta)$$<br>A ＝acceleration factor 加速因子 (At * Av)<br>N &#x3D; Sample Size<br>Ta &#x3D; Accelerated test time (hours) 加速測試時間<br>x^2 &#x3D; chi squared statistic 卡方統計值<br>CI &#x3D; Confidence Interval 信賴區間<br>freedom &#x3D; 2 x f + 2 (where f &#x3D; number of failures in ELF test)<br>這裡為什麼要用卡方統計值呢？卡方分配的圖型如下：<br><img src="/../img/Chi-square_distributionPDF.png"><br>wiki(<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E5%8D%A1%E6%96%B9%E5%88%86%E4%BD%88">https://zh.wikipedia.org/zh-tw/卡方分佈</a>)<br>我們可以看到，卡方分配是一個右偏的分佈，這意味著當樣本數增加時，卡方統計值也會增加。因此，我們可以通過卡方統計值來估算樣本數。</p>
+<p>$x^2$可透過excel的公式：CHISQ.INV(CI, freedom) 得知$X^2$<br>通常我們會設定信賴水準為60%，而自由度則為2 x f + 2。<br>60%的信賴水準意味著我們有60%的把握，不設定為90%或95%的原因是，這樣會增加樣本數，進而增加成本和時間。<br>而自由度的部分，則是根據失敗次數來決定，自由度的計算公式為2 x f + 2，其中f為失敗次數。若真的測試過程中有失敗，也不一定意味著算測試失敗，仍可透過自由度的f值，來告訴我們說這一次實驗的MTBF為多少。</p>
 
     </div>
 
@@ -216,13 +217,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E4%BA%BAQA/" rel="prev" title="軟體人QA">
-      <i class="fa fa-chevron-left"></i> 軟體人QA
+    <a href="/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E6%96%B9%E6%B3%95%E8%AB%96/" rel="prev" title="軟體方法論">
+      <i class="fa fa-chevron-left"></i> 軟體方法論
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2024/04/08/2024-04-08%20%E9%A9%97%E8%AD%89%E6%A8%A3%E6%9C%AC%E6%95%B8%E7%A9%B6%E7%AB%9F%E8%A6%81%E5%A4%9A%E5%B0%91%E6%98%AF%E9%81%A9%E5%90%88%E7%9A%84/" rel="next" title="驗證樣本數的究竟要多少是適合的？">
-      驗證樣本數的究竟要多少是適合的？ <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -281,7 +279,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BB%9F%E9%AB%94%E6%96%B9%E6%B3%95%E8%AB%96"><span class="nav-number">1.</span> <span class="nav-text">軟體方法論</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DevOps"><span class="nav-number">1.1.</span> <span class="nav-text">DevOps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scrum"><span class="nav-number">1.2.</span> <span class="nav-text">Scrum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DevSecOps"><span class="nav-number">1.3.</span> <span class="nav-text">DevSecOps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DevMLOps"><span class="nav-number">1.4.</span> <span class="nav-text">DevMLOps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%80%91%E5%B8%83%E5%BC%8F%E9%96%8B%E7%99%BC"><span class="nav-number">1.5.</span> <span class="nav-text">瀑布式開發</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

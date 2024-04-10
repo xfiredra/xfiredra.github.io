@@ -145,6 +145,76 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/08/2024-04-08%20%E9%A9%97%E8%AD%89%E6%A8%A3%E6%9C%AC%E6%95%B8%E7%A9%B6%E7%AB%9F%E8%A6%81%E5%A4%9A%E5%B0%91%E6%98%AF%E9%81%A9%E5%90%88%E7%9A%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ST.W">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wellcome to ST.W's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/08/2024-04-08%20%E9%A9%97%E8%AD%89%E6%A8%A3%E6%9C%AC%E6%95%B8%E7%A9%B6%E7%AB%9F%E8%A6%81%E5%A4%9A%E5%B0%91%E6%98%AF%E9%81%A9%E5%90%88%E7%9A%84/" class="post-title-link" itemprop="url">驗證樣本數的究竟要多少是適合的？</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-08 13:24:55" itemprop="dateCreated datePublished" datetime="2024-04-08T13:24:55+08:00">2024-04-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-04-10 11:37:40" itemprop="dateModified" datetime="2024-04-10T11:37:40+08:00">2024-04-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近時有夥伴一直問到、探討樣本數的多寡。多數都是前輩留下、至少100個才有得計算百分比、一個PCB連版數等因素而定產品驗證時的樣本數。<br>我們先冷靜下來看，驗證的目的應該是什麼？是要有一份報告可以給客戶、老闆交代？還是要從驗證報告中找出問題之所在。<br>我想很多公司、組織多數上都是選擇前者，一但驗證發生不及格，就針對驗證單位究竟是什麼問題？而不是從驗證報告中找出問題之所在。一種給人的感覺是「喜於通過、羞於不良」的心態，久而久之，組織就漸漸的減少驗證的意義～～～甚至，驗少PASS就好，也沒關係。</p>
+<p>言歸正傳～一般驗證可分為以下三個階段：</p>
+<pre class="mermaid">graph LR
+    A[EVT 評估驗證] --> B[DVT 設計驗證] --> C[PVT 量產驗證]</pre>
+<p>擔心篇幅過大，這一篇先談談所謂的可靠度驗證所需要的樣本數量<br>可靠度驗證通常用MTBF來表示，MTBF是Mean Time Between Failure的縮寫，中文為平均無故障時間，是指一個系統或元件在特定時間內的平均無故障運行時間。MTBF是一個重要的可靠度指標，用來衡量一個系統或元件的可靠度。MTBF越高，表示系統或元件的可靠度越高，反之亦然。<br>然而MTBF的計算方式是：<br>$$MTBF &#x3D; \frac{總運行時間}{故障次數}$$<br>這個公式的前提是，我們必須知道總運行時間和故障次數，這樣才能計算出MTBF。但是在實際應用中，我們往往無法知道總運行時間和故障次數，這時我們就需要通過樣本數來估算MTBF。<br>那麼，樣本數究竟要多少才能估算出MTBF呢？這是一個很複雜的問題，因為樣本數的大小會影響到估算的準確性。一般來說，樣本數越大，估算的準確性就越高。但是，樣本數也不能太大，否則會增加成本和時間。因此，我們需要找到一個合適的樣本數，來估算MTBF。<br>FIT(Failure in Time)公式：<br>$$FIT &#x3D; 10^9 * x^2&#x2F;(2 * A * N * Ta)$$<br>A ＝acceleration factor 加速因子 (At * Av)<br>N &#x3D; Sample Size<br>Ta &#x3D; Accelerated test time (hours) 加速測試時間<br>x^2 &#x3D; chi squared statistic 卡方統計值<br>CI &#x3D; Confidence Interval 信賴區間<br>freedom &#x3D; 2 x f + 2 (where f &#x3D; number of failures in ELF test)<br>這裡為什麼要用卡方統計值呢？卡方分配的圖型如下：<br><img src="/../img/Chi-square_distributionPDF.png"><br>wiki(<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E5%8D%A1%E6%96%B9%E5%88%86%E4%BD%88">https://zh.wikipedia.org/zh-tw/卡方分佈</a>)<br>我們可以看到，卡方分配是一個右偏的分佈，這意味著當樣本數增加時，卡方統計值也會增加。因此，我們可以通過卡方統計值來估算樣本數。</p>
+<p>$x^2$可透過excel的公式：CHISQ.INV(CI, freedom) 得知$X^2$<br>通常我們會設定信賴水準為60%，而自由度則為2 x f + 2。<br>60%的信賴水準意味著我們有60%的把握，不設定為90%或95%的原因是，這樣會增加樣本數，進而增加成本和時間。<br>而自由度的部分，則是根據失敗次數來決定，自由度的計算公式為2 x f + 2，其中f為失敗次數。若真的測試過程中有失敗，也不一定意味著算測試失敗，仍可透過自由度的f值，來告訴我們說這一次實驗的MTBF為多少。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/02/2024-04-02%20%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E6%96%B9%E6%B3%95%E8%AB%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -442,7 +512,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
